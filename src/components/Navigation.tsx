@@ -2,16 +2,19 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const Navigation = () => {
   const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: '首頁', path: '/' },
-    { name: '冥想好處', path: '/benefits' },
-    { name: '冥想資源', path: '/resources' },
-    { name: '關於我們', path: '/about' },
-    { name: '冥想記錄', path: '/tracker' },
+    { name: '首頁', path: '/breathing-space/' },
+    { name: '冥想好處', path: '/breathing-space/benefits/' },
+    { name: '冥想資源', path: '/breathing-space/resources/' },
+    { name: '關於我們', path: '/breathing-space/about/' },
+    { name: '冥想記錄', path: '/breathing-space/tracker/' },
   ]
 
   return (
@@ -19,10 +22,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
-            <Link href="/" className="flex items-center">
+            <Link href="/breathing-space/" className="flex items-center">
               <span className="text-xl font-bold text-primary">三分鐘呼吸空間</span>
             </Link>
           </div>
+          
+          {/* Desktop Navigation */}
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
             {navItems.map((item) => (
               <Link
@@ -38,6 +43,42 @@ const Navigation = () => {
               </Link>
             ))}
           </div>
+
+          {/* Mobile menu button */}
+          <div className="flex items-center sm:hidden">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <span className="sr-only">打開主選單</span>
+              {isMenuOpen ? (
+                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+        <div className="pt-2 pb-3 space-y-1">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className={`block px-3 py-2 text-base font-medium ${
+                pathname === item.path
+                  ? 'text-primary bg-primary/5'
+                  : 'text-gray-500 hover:text-primary hover:bg-gray-50'
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
