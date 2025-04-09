@@ -17,6 +17,13 @@ const Navigation = () => {
     { name: '冥想記錄', path: '/breathing-space/tracker/' },
   ]
 
+  const isActivePath = (path: string) => {
+    if (path === '/breathing-space/' && pathname === '/breathing-space') {
+      return true;
+    }
+    return pathname?.endsWith(path);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,7 +41,7 @@ const Navigation = () => {
                 key={item.path}
                 href={item.path}
                 className={`px-3 py-2 text-sm font-medium ${
-                  pathname === item.path
+                  isActivePath(item.path)
                     ? 'text-primary'
                     : 'text-gray-500 hover:text-primary'
                 }`}
@@ -70,7 +77,7 @@ const Navigation = () => {
               key={item.path}
               href={item.path}
               className={`block px-3 py-2 text-base font-medium ${
-                pathname === item.path
+                isActivePath(item.path)
                   ? 'text-primary bg-primary/5'
                   : 'text-gray-500 hover:text-primary hover:bg-gray-50'
               }`}
