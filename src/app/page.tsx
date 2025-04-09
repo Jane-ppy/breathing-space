@@ -46,6 +46,70 @@ export default function Home() {
                         </div>
                     </section>
 
+                    {/* Origin Story Section */}
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                專案起源 | Project Origin
+                            </h2>
+                            <div className="max-w-3xl mx-auto">
+                                <p className="text-lg text-gray-600 mb-4">
+                                    在這個數位時代，我們常常發現自己被智能手機和無盡的通知所困擾。這個專案源於一個個人經歷：在尋找生命意義和內在平靜的過程中，發現了三分鐘呼吸空間這個簡單而強大的練習方法。
+                                </p>
+                                <p className="text-lg text-gray-600">
+                                    In this digital age, we often find ourselves trapped by smartphones and endless notifications. This project emerged from a personal journey: discovering the simple yet powerful practice of the three-minute breathing space while searching for life's meaning and inner peace.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        {/* Research Findings Section */}
+                        <div className="grid md:grid-cols-2 gap-8 mt-12">
+                            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                                    研究發現 | Research Findings
+                                </h3>
+                                <div className="space-y-4">
+                                    <div>
+                                        <p className="text-gray-600 mb-2">
+                                            根據 Ward 等人（2017）的研究：
+                                        </p>
+                                        <p className="text-gray-800">
+                                            智能手機的存在會顯著降低認知能力，即使手機處於關機狀態，也會佔用寶貴的認知資源。
+                                        </p>
+                                        <p className="text-gray-600 mt-2">
+                                            According to Ward et al. (2017):
+                                        </p>
+                                        <p className="text-gray-800">
+                                            The mere presence of smartphones reduces cognitive capacity, even when the device is turned off, consuming valuable cognitive resources.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                                    最新研究 | Latest Research
+                                </h3>
+                                <div className="space-y-4">
+                                    <div>
+                                        <p className="text-gray-600 mb-2">
+                                            Santilli 和 Spann（2024）發現：
+                                        </p>
+                                        <p className="text-gray-800">
+                                            短暫的正念練習可以顯著改善注意力和情緒調節能力，特別是在面對數位干擾時。
+                                        </p>
+                                        <p className="text-gray-600 mt-2">
+                                            Santilli & Spann (2024) found:
+                                        </p>
+                                        <p className="text-gray-800">
+                                            Brief mindfulness practices can significantly improve attention and emotional regulation, particularly when facing digital distractions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <Benefits />
 
                     <section className="py-24 container mx-auto px-4" data-name="intro-section">
@@ -101,69 +165,6 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                </div>
-                {/* Origin Story Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                            專案起源 | Project Origin
-                        </h2>
-                        <div className="max-w-3xl mx-auto">
-                            <p className="text-lg text-gray-600 mb-4">
-                                在這個數位時代，我們常常發現自己被智能手機和無盡的通知所困擾。這個專案源於一個個人經歷：在尋找生命意義和內在平靜的過程中，發現了三分鐘呼吸空間這個簡單而強大的練習方法。
-                            </p>
-                            <p className="text-lg text-gray-600">
-                                In this digital age, we often find ourselves trapped by smartphones and endless notifications. This project emerged from a personal journey: discovering the simple yet powerful practice of the three-minute breathing space while searching for life's meaning and inner peace.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    {/* Research Findings Section */}
-                    <div className="grid md:grid-cols-2 gap-8 mt-12">
-                        <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                                研究發現 | Research Findings
-                            </h3>
-                            <div className="space-y-4">
-                                <div>
-                                    <p className="text-gray-600 mb-2">
-                                        根據 Ward 等人（2017）的研究：
-                                    </p>
-                                    <p className="text-gray-800">
-                                        智能手機的存在會顯著降低認知能力，即使手機處於關機狀態，也會佔用寶貴的認知資源。
-                                    </p>
-                                    <p className="text-gray-600 mt-2">
-                                        According to Ward et al. (2017):
-                                    </p>
-                                    <p className="text-gray-800">
-                                        The mere presence of smartphones reduces cognitive capacity, even when the device is turned off, consuming valuable cognitive resources.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                                最新研究 | Latest Research
-                            </h3>
-                            <div className="space-y-4">
-                                <div>
-                                    <p className="text-gray-600 mb-2">
-                                        Santilli 和 Spann（2024）發現：
-                                    </p>
-                                    <p className="text-gray-800">
-                                        短暫的正念練習可以顯著改善注意力和情緒調節能力，特別是在面對數位干擾時。
-                                    </p>
-                                    <p className="text-gray-600 mt-2">
-                                        Santilli & Spann (2024) found:
-                                    </p>
-                                    <p className="text-gray-800">
-                                        Brief mindfulness practices can significantly improve attention and emotional regulation, particularly when facing digital distractions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </>
         );
