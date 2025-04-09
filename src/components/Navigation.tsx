@@ -15,6 +15,7 @@ const Navigation = () => {
     { name: '冥想資源', path: '/resources' },
     { name: '關於我們', path: '/about' },
     { name: '冥想記錄', path: '/tracker' },
+    { name: '參考文獻', path: '/references' }
   ]
 
   return (
