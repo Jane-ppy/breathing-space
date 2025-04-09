@@ -7,49 +7,79 @@ export default function About() {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen pt-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+      <div className="min-h-screen pt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <h1 className="text-3xl sm:text-4xl font-light mb-6 text-gray-800">
-              關於三分鐘呼吸空間
+            <h1 className="text-4xl font-bold text-accent mb-4">
+              關於我們
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              讓每個人都能在忙碌的生活中找到屬於自己的寧靜時刻
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              了解這個學術研究項目的背景和目的
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="prose prose-lg max-w-none"
-          >
-            <div className="bg-gray-50 p-8 rounded-xl mb-12">
-              <h2 className="text-2xl font-medium text-gray-800 mb-4">我們的理念</h2>
-              <p className="text-gray-600 leading-relaxed">
-                在這個快節奏的現代社會中，我們常常忽略了最重要的事情——與自己內在的連結。三分鐘呼吸空間正是為此而生，我們相信，只需要短短三分鐘的正念練習，就能幫助你重新找回平靜與專注。
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white p-8 rounded-lg shadow-sm mb-8"
+            >
+              <h2 className="text-2xl font-semibold text-accent mb-4">
+                項目背景
+              </h2>
+              <p className="text-gray-600 mb-4">
+                這是一個由 CCI4900 畢業專題課程支持的學術研究項目，旨在探索短期冥想練習對大學生心理健康和學習效果的影響。
               </p>
-            </div>
+              <p className="text-gray-600">
+                通過提供簡單易行的三分鐘冥想練習，我們希望幫助學生培養正念意識，改善情緒管理能力，並提升學習效率。
+              </p>
+            </motion.div>
 
-            <div className="bg-gray-50 p-8 rounded-xl mb-12">
-              <h2 className="text-2xl font-medium text-gray-800 mb-4">為什麼是三分鐘？</h2>
-              <p className="text-gray-600 leading-relaxed">
-                研究表明，即使是短暫的正念練習也能帶來顯著的效果。三分鐘是一個最佳的平衡點——足夠短，讓你能輕鬆地融入日常生活；同時又足夠長，能讓你真正沉浸在當下的體驗中。
-              </p>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white p-8 rounded-lg shadow-sm mb-8"
+            >
+              <h2 className="text-2xl font-semibold text-accent mb-4">
+                研究目標
+              </h2>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li>評估短期冥想練習對學生情緒調節能力的影響</li>
+                <li>研究正念練習與學業表現之間的關係</li>
+                <li>探索適合大學生的冥想練習方式</li>
+                <li>收集和分析冥想練習的數據，為未來研究提供參考</li>
+              </ul>
+            </motion.div>
 
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h2 className="text-2xl font-medium text-gray-800 mb-4">我們的承諾</h2>
-              <p className="text-gray-600 leading-relaxed">
-                我們承諾提供簡單易行的正念練習指導，幫助你在日常生活中培養正念習慣。無論你是正念新手還是有經驗的修行者，都能在這裡找到適合自己的練習方式。
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white p-8 rounded-lg shadow-sm"
+            >
+              <h2 className="text-2xl font-semibold text-accent mb-4">
+                參與方式
+              </h2>
+              <p className="text-gray-600 mb-4">
+                您可以通过以下方式参与这个研究项目：
               </p>
-            </div>
-          </motion.div>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li>使用網站提供的冥想資源進行練習</li>
+                <li>記錄您的冥想練習和情緒狀態</li>
+                <li>分享您的練習體驗和建議</li>
+              </ul>
+              <p className="text-gray-600 mt-4">
+                所有收集的數據都將匿名處理，僅用於學術研究目的。
+              </p>
+            </motion.div>
+          </div>
         </div>
       </div>
     </>
