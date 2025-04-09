@@ -1,8 +1,7 @@
 "use client"
 
-import Navigation from '@/components/Navigation'
-import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Navigation from '@/components/Navigation'
 
 interface Practice {
   date: string;

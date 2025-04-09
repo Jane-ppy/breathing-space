@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/breathing-space',
+  basePath: process.env.NODE_ENV === 'production' ? '/breathing-space' : '',
   assetPrefix: '/breathing-space/',
   trailingSlash: true,
   distDir: 'out',

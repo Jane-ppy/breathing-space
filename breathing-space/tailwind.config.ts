@@ -16,6 +16,14 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-noto-sans)'],
       },
+      container: {
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+        },
+      },
     },
   },
   plugins: [],

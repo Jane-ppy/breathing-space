@@ -20,10 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-TW">
-      <body className={`${notoSans.variable} font-sans`}>
-        <main className="min-h-screen bg-white">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      </head>
+      <body className={`${notoSans.variable} font-sans antialiased`}>
+        <div className="min-h-screen bg-white text-gray-900">
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );
