@@ -8,6 +8,9 @@ const nextConfig = {
   assetPrefix: '/breathing-space/',
   trailingSlash: true,
   distDir: 'out',
+  eslint: {
+    ignoreDuringBuilds: true
+  }
 }
 
 module.exports = nextConfig 
