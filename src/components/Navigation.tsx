@@ -10,11 +10,11 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: '首頁', path: '/breathing-space/' },
-    { name: '冥想好處', path: '/breathing-space/benefits/' },
-    { name: '冥想資源', path: '/breathing-space/resources/' },
-    { name: '關於我們', path: '/breathing-space/about/' },
-    { name: '冥想記錄', path: '/breathing-space/tracker/' },
+    { name: '首頁', path: '/' },
+    { name: '冥想好處', path: '/benefits' },
+    { name: '冥想資源', path: '/resources' },
+    { name: '關於我們', path: '/about' },
+    { name: '冥想記錄', path: '/tracker' },
   ]
 
   return (
@@ -22,7 +22,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
-            <Link href="/breathing-space/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <span className="text-xl font-bold text-gray-900">三分鐘呼吸空間</span>
             </Link>
           </div>

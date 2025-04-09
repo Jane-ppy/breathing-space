@@ -29,14 +29,14 @@ export default function Home() {
                                 </p>
                                 <div className="space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center items-center">
                                     <a 
-                                        href="/breathing-space/meditation/"
+                                        href="/meditation"
                                         className="inline-block bg-primary text-white px-10 py-4 rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105 text-lg"
                                         data-name="start-button"
                                     >
                                         開始冥想
                                     </a>
                                     <a 
-                                        href="/breathing-space/about/"
+                                        href="/about"
                                         className="inline-block border-2 border-gray-300 text-gray-600 px-10 py-4 rounded-lg hover:border-primary hover:text-primary transition-all transform hover:scale-105 text-lg"
                                     >
                                         了解更多
