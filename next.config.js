@@ -5,9 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: '/breathing-space/',
   trailingSlash: true,
-  distDir: 'out',
 }
 
 module.exports = nextConfig 
