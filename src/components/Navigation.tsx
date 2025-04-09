@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <Link href="/breathing-space/" className="flex items-center">
-              <span className="text-xl font-bold text-primary">三分鐘呼吸空間</span>
+              <span className="text-xl font-bold text-gray-900">三分鐘呼吸空間</span>
             </Link>
           </div>
           
@@ -33,10 +33,10 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`px-3 py-2 text-sm font-medium ${
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
                   pathname === item.path
                     ? 'text-primary'
-                    : 'text-gray-500 hover:text-primary'
+                    : 'text-gray-600 hover:text-primary'
                 }`}
               >
                 {item.name}
@@ -72,7 +72,7 @@ const Navigation = () => {
               className={`block px-3 py-2 text-base font-medium ${
                 pathname === item.path
                   ? 'text-primary bg-primary/5'
-                  : 'text-gray-500 hover:text-primary hover:bg-gray-50'
+                  : 'text-gray-600 hover:text-primary hover:bg-gray-50'
               }`}
               onClick={() => setIsMenuOpen(false)}
             >

@@ -29,7 +29,7 @@ export default function Home() {
                                 </p>
                                 <div className="space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center items-center">
                                     <a 
-                                        href="/breathing-space/practice/"
+                                        href="/breathing-space/meditation/"
                                         className="inline-block bg-primary text-white px-10 py-4 rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105 text-lg"
                                         data-name="start-button"
                                     >
