@@ -5,7 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: process.env.NODE_ENV === 'production' ? '/breathing-space' : '',
-  assetPrefix: '/breathing-space/',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/breathing-space/' : '',
   trailingSlash: true,
   distDir: 'out',
   eslint: {
