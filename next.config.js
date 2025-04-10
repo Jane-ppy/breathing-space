@@ -4,13 +4,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/breathing-space' : '',
+  basePath: '/breathing-space',
   assetPrefix: '/breathing-space/',
+<<<<<<< HEAD
   trailingSlash: true,
   distDir: 'out',
-  eslint: {
-    ignoreDuringBuilds: true
-  }
+=======
+>>>>>>> 8842bb6 (Initial commit)
 }
 
 module.exports = nextConfig 

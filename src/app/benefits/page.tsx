@@ -1,6 +1,7 @@
 "use client"
 
 import Navigation from '@/components/Navigation'
+import { motion } from 'framer-motion'
 
 const benefits = [
   {

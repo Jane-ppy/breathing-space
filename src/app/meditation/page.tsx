@@ -1,7 +1,9 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import Navigation from '@/components/Navigation'
+import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid'
 
 export default function Meditation() {
     const [timeLeft, setTimeLeft] = useState(180) // 3 minutes in seconds
