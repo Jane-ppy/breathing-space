@@ -1,4 +1,7 @@
-import Navigation from '@/components/Navigation';
+"use client"
+
+import { motion } from 'framer-motion'
+import Navigation from '@/components/Navigation'
 
 export default function References() {
     const references = [
@@ -33,68 +36,36 @@ export default function References() {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <>
             <Navigation />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                        參考文獻 | References
-                    </h1>
-                    <p className="text-xl text-gray-600">
-                        本專案的學術依據和參考資料
-                        <br />
-                        Academic foundations and references for this project
-                    </p>
-                </div>
-
-                <div className="max-w-4xl mx-auto">
-                    <div className="bg-white rounded-lg shadow-sm p-8 border border-gray-100">
+            <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+                <section className="py-24 container mx-auto px-4">
+                    <motion.div 
+                        className="max-w-4xl mx-auto"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h1 className="text-4xl font-light mb-12 text-center text-gray-800">參考文獻</h1>
+                        
                         <div className="space-y-8">
-                            {['書籍 | Books', '研究論文 | Research Papers'].map((category) => (
-                                <div key={category}>
-                                    <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                                        {category}
-                                    </h2>
-                                    <div className="space-y-6">
-                                        {references
-                                            .filter((ref) => ref.category === category)
-                                            .map((ref, index) => (
-                                                <div
-                                                    key={index}
-                                                    className="p-6 border border-gray-100 rounded-lg hover:border-primary transition-colors"
-                                                >
-                                                    <h3 className="text-xl font-medium text-gray-900 mb-2">
-                                                        {ref.title}
-                                                    </h3>
-                                                    <p className="text-gray-600">
-                                                        {ref.authors || ref.author}
-                                                    </p>
-                                                    <p className="text-gray-500">
-                                                        {ref.journal || ref.publisher}, {ref.year}
-                                                    </p>
-                                                </div>
-                                            ))}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                            <div id="ref1" className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                                <h2 className="text-xl font-semibold mb-4 text-gray-900">[1] 智能手機對認知能力的影響</h2>
+                                <p className="text-gray-600">
+                                    Ward, A. F., Duke, K., Gneezy, A., & Bos, M. W. (2017). Brain drain: The mere presence of one's own smartphone reduces available cognitive capacity. Journal of the Association for Consumer Research, 2(2), 140--154. <a href="https://doi.org/10.1086/691462" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://doi.org/10.1086/691462</a>
+                                </p>
+                            </div>
 
-                    <div className="mt-8 bg-white rounded-lg shadow-sm p-8 border border-gray-100">
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                            學術背景 | Academic Context
-                        </h2>
-                        <div className="space-y-4 text-gray-600">
-                            <p>
-                                本專案是香港中文大學 CCI4900 畢業專題研究的一部分，旨在探討數位時代中簡短正念練習對注意力和情緒調節的影響。
-                            </p>
-                            <p>
-                                This project is part of the CCI4900 Capstone Project at The Chinese University of Hong Kong, investigating the effects of brief mindfulness practices on attention and emotion regulation in the digital age.
-                            </p>
+                            <div id="ref2" className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                                <h2 className="text-xl font-semibold mb-4 text-gray-900">[2] 過度思考與應對方法</h2>
+                                <p className="text-gray-600">
+                                    Santilli, M. (2024, November 8). How to stop overthinking: Causes and ways to Cope. Forbes. <a href="https://www.forbes.com/health/mind/what-causes-overthinking-and-6-ways-to-stop/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://www.forbes.com/health/mind/what-causes-overthinking-and-6-ways-to-stop/</a>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </section>
             </div>
-        </div>
-    );
+        </>
+    )
 } 
