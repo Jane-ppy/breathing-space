@@ -6,11 +6,8 @@ const nextConfig = {
   },
   basePath: '/breathing-space',
   assetPrefix: '/breathing-space/',
-<<<<<<< HEAD
   trailingSlash: true,
   distDir: 'out',
-=======
->>>>>>> 8842bb6 (Initial commit)
 }
 
 module.exports = nextConfig 
