@@ -3,74 +3,8 @@
 import { motion } from 'framer-motion'
 import Benefits from '@/components/Benefits'
 import Navigation from '@/components/Navigation'
-import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Home() {
-    const { language } = useLanguage();
-    
-    const content = {
-        zh: {
-            title: '三分鐘呼吸空間',
-            subtitle: 'Three-Minute Breathing Space',
-            description: '活在當下，專注呼吸，讓心靈找到平靜',
-            startButton: '開始冥想',
-            learnMore: '了解更多',
-            originTitle: '專案起源 | Project Origin',
-            originText: '在這個數位時代，我們常常發現自己被智能手機和無盡的通知所困擾。這個專案源於一個個人經歷：在尋找生命意義和內在平靜的過程中，發現了三分鐘呼吸空間這個簡單而強大的練習方法。',
-            researchTitle: '研究發現 | Research Findings',
-            researchText: '根據 Ward 等人（2017）的研究：智能手機的存在會顯著降低認知能力，即使手機處於關機狀態，也會佔用寶貴的認知資源。',
-            latestResearchTitle: '最新研究 | Latest Research',
-            latestResearchText: 'Santilli 和 Spann（2024）發現：短暫的正念練習可以顯著改善注意力和情緒調節能力，特別是在面對數位干擾時。',
-            journeyTitle: '開始您的冥想之旅',
-            journeyText: '花一點時間停下腳步，專注呼吸，與當下時刻建立連結。只需三分鐘，就能轉變您的心境。',
-            features: {
-                focus: {
-                    title: '專注當下',
-                    description: '通過呼吸練習，培養正念覺知'
-                },
-                relax: {
-                    title: '放鬆身心',
-                    description: '釋放壓力，找回內在平靜'
-                },
-                grow: {
-                    title: '持續成長',
-                    description: '建立日常習慣，滋養心靈'
-                }
-            }
-        },
-        en: {
-            title: 'Three-Minute Breathing Space',
-            subtitle: '三分鐘呼吸空間',
-            description: 'Live in the present, focus on breathing, find peace in your mind',
-            startButton: 'Start Meditation',
-            learnMore: 'Learn More',
-            originTitle: 'Project Origin | 專案起源',
-            originText: 'In this digital age, we often find ourselves trapped by smartphones and endless notifications. This project emerged from a personal journey: discovering the simple yet powerful practice of the three-minute breathing space while searching for life\'s meaning and inner peace.',
-            researchTitle: 'Research Findings | 研究發現',
-            researchText: 'According to Ward et al. (2017): The mere presence of smartphones reduces cognitive capacity, even when the device is turned off, consuming valuable cognitive resources.',
-            latestResearchTitle: 'Latest Research | 最新研究',
-            latestResearchText: 'Santilli & Spann (2024) found: Brief mindfulness practices can significantly improve attention and emotional regulation, particularly when facing digital distractions.',
-            journeyTitle: 'Begin Your Meditation Journey',
-            journeyText: 'Take a moment to pause, focus on your breath, and connect with the present moment. Just three minutes can transform your state of mind.',
-            features: {
-                focus: {
-                    title: 'Focus on Present',
-                    description: 'Cultivate mindfulness through breathing exercises'
-                },
-                relax: {
-                    title: 'Relax Body & Mind',
-                    description: 'Release stress and find inner peace'
-                },
-                grow: {
-                    title: 'Continuous Growth',
-                    description: 'Build daily habits to nurture your soul'
-                }
-            }
-        }
-    };
-
-    const currentContent = content[language];
-
     try {
         return (
             <>
