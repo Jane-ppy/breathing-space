@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/breathing-space' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/breathing-space/' : '',
+  basePath: '/breathing-space',
+  assetPrefix: '/breathing-space/',
   trailingSlash: true,
   distDir: 'out',
   eslint: {
