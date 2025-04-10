@@ -1,12 +1,11 @@
-"use client"
-
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
-import { LanguageProvider } from "@/contexts/LanguageContext";
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
   variable: "--font-noto-sans",
 });
 
@@ -21,17 +20,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="zh-TW">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </head>
       <body className={`${notoSans.variable} font-sans antialiased`}>
+<<<<<<< HEAD
         <LanguageProvider>
           <div className="min-h-screen bg-white text-gray-900">
             {children}
           </div>
         </LanguageProvider>
+=======
+        <div className="min-h-screen bg-white text-gray-900">
+          {children}
+        </div>
+>>>>>>> fb1afd1
       </body>
     </html>
   );
